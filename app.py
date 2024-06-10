@@ -38,7 +38,7 @@ while True:
             magazine_id = cursor.lastrowid  # Use this to fetch the id of the newly created magazine
 
             # Create an article
-            cursor.execute('INSERT INTO articles (title, content, author_id, magazine_id) VALUES (?,?,?,?)',
+            cursor.execute('INSERT INTO articles (title, content, author_id, magazine_id) VALUES (?, ?, ?, ?)',
                            (article_title, article_content, author_id, magazine_id))
 
             conn.commit()
@@ -80,6 +80,5 @@ while True:
 
         elif choice == "4":
             break
-
 if __name__ == "__main__":
     main()

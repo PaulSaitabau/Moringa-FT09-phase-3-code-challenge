@@ -11,8 +11,8 @@ class Article:
     def __repr__(self):
         return f'<Article {self.title}>'
 
-@property
-def author(self):
+    @property
+    def author(self):
         from models.author import Author
         conn = get_db_connection()
         cursor = conn.cursor()
@@ -23,8 +23,8 @@ def author(self):
             return Author(author_data['id'], author_data['name'])
         return None
 
-@property
-def magazine(self):
+    @property
+    def magazine(self):
         from models.magazine import Magazine
         conn = get_db_connection()
         cursor = conn.cursor()

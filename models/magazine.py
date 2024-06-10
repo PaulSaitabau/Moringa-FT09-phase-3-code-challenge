@@ -9,6 +9,7 @@ class Magazine:
 
     def __repr__(self):
         return f'<Magazine {self.name}>'
+
     @staticmethod
     def delete_magazine(magazine_id):
         conn = get_db_connection()

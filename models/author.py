@@ -1,4 +1,3 @@
-
 from database.connection import get_db_connection
 from models.article import Article
 
@@ -10,8 +9,8 @@ class Author:
     def __repr__(self):
         return f'<Author {self.name}>'
 
-@property
-def articles(self):
+    @property
+    def articles(self):
         conn = get_db_connection()
         cursor = conn.cursor()
         cursor.execute('SELECT * FROM articles WHERE author_id = ?', (self.id,))
